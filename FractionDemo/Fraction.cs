@@ -23,7 +23,7 @@ namespace FractionDemo
 
         ~Fraction() //Ceci est le destructeur
         {
-            MessageBox.Show("Destruction de l'objet");
+            //MessageBox.Show("Destruction de l'objet");
         }
         #endregion
 
@@ -98,6 +98,70 @@ namespace FractionDemo
         {
             String[] strs = str.Split('/');
             return new Fraction(Int32.Parse(strs[0]), Int32.Parse(strs[1]));
+        }
+        #endregion
+
+        #region Surchage d'opérateurs
+        public static Fraction operator +(Fraction f, Fraction g)
+        {
+            return new Fraction(((f.numerateur * g.denominateur) + (f.denominateur * g.numerateur)), (f.denominateur * g.denominateur));
+        }
+
+        public static Fraction operator -(Fraction f, Fraction g)
+        {
+            return new Fraction(((f.numerateur * g.denominateur) - (f.denominateur * g.numerateur)), (f.denominateur * g.denominateur));
+        }
+
+        public static Fraction operator *(Fraction f, Fraction g)
+        {
+            return new Fraction((f.numerateur * g.numerateur), (f.denominateur * g.denominateur));
+        }
+
+        public static Fraction operator *(Fraction f, Int32 i)
+        {
+            return new Fraction((f.numerateur * i), f.denominateur);
+        }
+
+        public static Fraction operator /(Fraction f, Fraction g)
+        {
+            return new Fraction((f.numerateur * g.denominateur), (f.denominateur * g.numerateur));
+        }
+
+        public static Fraction operator /(Fraction f, Int32 i)
+        {
+            return new Fraction(f.numerateur, (f.denominateur * i));
+        }
+
+        public static Boolean operator ==(Fraction f, Fraction g)
+        {
+            f.simplifier();
+            g.simplifier();
+            if (f.numerateur == g.numerateur && f.denominateur == g.denominateur) { return true; }
+            else { return false; }
+        }
+
+        public static Boolean operator !=(Fraction f, Fraction g)
+        {
+            f.simplifier();
+            g.simplifier();
+            if (f.numerateur == g.numerateur && f.denominateur == g.denominateur) { return false; }
+            else { return true; }
+        }
+
+        public static Boolean operator >(Fraction f, Fraction g)
+        {
+            f.simplifier();
+            g.simplifier();
+            if (f.numerateur > g.numerateur && f.denominateur > g.denominateur) { return true; }
+            else { return false; }
+        }
+
+        public static Boolean operator <(Fraction f, Fraction g)
+        {
+            f.simplifier();
+            g.simplifier();
+            if (f.numerateur < g.numerateur && f.denominateur < g.denominateur) { return true; }
+            else { return false; }
         }
         #endregion
     }

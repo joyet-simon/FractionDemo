@@ -19,7 +19,7 @@ namespace FractionDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Fraction f = new Fraction(9, 6);
+            Fraction f = new Fraction(9, 6);
             //MessageBox.Show(f.valeur.ToString());
             //f.simplifier();
             //MessageBox.Show(f.toText());
@@ -28,7 +28,8 @@ namespace FractionDemo
             //MessageBox.Show(f.nom);
             String s = "7/5";
             Fraction f2 = Fraction.Parse(s);
-            MessageBox.Show(f2.toText());
+            Fraction f3 = f2 / 3;
+            MessageBox.Show(f3.toText());
         }
     }
 }
