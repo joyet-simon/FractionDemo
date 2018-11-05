@@ -39,7 +39,7 @@ namespace FractionDemo
 
         public String toText()
         {
-            return numerateur + "/" + denominateur;
+            return numerateur.ToString() + "/" + denominateur.ToString();
         }
 
         public void inverser()
@@ -49,23 +49,28 @@ namespace FractionDemo
             denominateur = temp;
         }
 
-        public void simplifier()
+        private Int32 pgcd()
         {
             Int32 r;
-            Int32 num = numerateur;
-            Int32 denom = denominateur;
+            Int32 n = numerateur;
+            Int32 d = denominateur;
             while (true)
             {
-                r = num % denom;
+                r = n % d;
                 if (r == 0)
                 {
                     break;
                 }
-                num = denom;
-                denom = r;
+                n = d;
+                d = r;
             }
-            numerateur = numerateur / denom;
-            denominateur = denominateur / denom;
+            return d;
+        }
+
+        public void simplifier()
+        {
+            numerateur = numerateur / pgcd();
+            denominateur = denominateur / pgcd();
         }
     }
 }
