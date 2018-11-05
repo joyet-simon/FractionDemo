@@ -19,14 +19,13 @@ namespace FractionDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Fraction f = new Fraction();
-            f.denominateur = 7;
-            f.numerateur = 10;
+            Fraction f = new Fraction(9, 6);
             MessageBox.Show(f.valeur.ToString());
             f.simplifier();
             MessageBox.Show(f.toText());
             f.inverser();
             MessageBox.Show(f.toText());
+            MessageBox.Show(f.nom);
         }
     }
 }
