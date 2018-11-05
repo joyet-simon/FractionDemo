@@ -22,6 +22,7 @@ namespace FractionDemo
             Fraction f = new Fraction();
             f.denominateur = 7;
             f.numerateur = 10;
+            MessageBox.Show(f.valeur.ToString());
             f.simplifier();
             MessageBox.Show(f.toText());
             f.inverser();

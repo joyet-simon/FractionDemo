@@ -3,22 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
 
 namespace FractionDemo
 {
     class Fraction
     {
+        #region Constructeur et destructeur
+        public Fraction() { }
+
+        public Fraction(int numerateur, int denominateur)
+        {
+            this.numerateur = numerateur;
+            this.denominateur = denominateur;
+        }
+
+        ~Fraction() //Ceci est le destructeur
+        {
+            MessageBox.Show("Destruction de l'objet");
+        }
+        #endregion
+        #region Propriétés
         private Int32 _numerateur;
         public Int32 numerateur
         {
-            set
-            {
-                _numerateur = value;
-            }
-            get
-            {
-                return _numerateur;
-            }
+            set { _numerateur = value; }
+            get { return _numerateur; }
         }
         public Int32 denominateur { get; set; }
 
@@ -36,7 +47,8 @@ namespace FractionDemo
         {
             get { return (Double)numerateur / (Double)denominateur; }
         }
-
+        #endregion
+        #region méthodes
         public String toText()
         {
             return numerateur.ToString() + "/" + denominateur.ToString();
@@ -60,10 +72,7 @@ namespace FractionDemo
             while (true)
             {
                 r = n % d;
-                if (r == 0)
-                {
-                    break;
-                }
+                if (r == 0) { break; }
                 n = d;
                 d = r;
             }
@@ -79,6 +88,7 @@ namespace FractionDemo
                 denominateur = denominateur / p;
             }
         }
+        #endregion
     }
 }
 
