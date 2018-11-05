@@ -20,8 +20,8 @@ namespace FractionDemo
         private void button1_Click(object sender, EventArgs e)
         {
             Fraction f = new Fraction();
-            f.denominateur = 6;
-            f.numerateur = 9;
+            f.denominateur = 7;
+            f.numerateur = 10;
             f.simplifier();
             MessageBox.Show(f.toText());
             f.inverser();

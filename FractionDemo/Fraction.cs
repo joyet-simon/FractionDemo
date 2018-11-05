@@ -44,9 +44,12 @@ namespace FractionDemo
 
         public void inverser()
         {
-            Int32 temp = numerateur;
-            numerateur = denominateur;
-            denominateur = temp;
+            if (numerateur != 0)
+            {
+                Int32 temp = numerateur;
+                numerateur = denominateur;
+                denominateur = temp;
+            }
         }
 
         private Int32 pgcd()
@@ -69,8 +72,12 @@ namespace FractionDemo
 
         public void simplifier()
         {
-            numerateur = numerateur / pgcd();
-            denominateur = denominateur / pgcd();
+            if (numerateur != 0)
+            {
+                Int32 p = pgcd();
+                numerateur = numerateur / p;
+                denominateur = denominateur / p;
+            }
         }
     }
 }
