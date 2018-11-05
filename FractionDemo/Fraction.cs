@@ -11,13 +11,14 @@ namespace FractionDemo
     class Fraction
     {
         #region Constructeur et destructeur
-        public Fraction() { this.nom = "Fraction" + numero++; }
+        public Fraction() : this(0, 0) { }
 
         public Fraction(int numerateur, int denominateur)
         {
             this.numerateur = numerateur;
             this.denominateur = denominateur;
-            this.nom = "Fraction" + numero++;
+            this.nom = "Fraction" + numero.ToString();
+            numero++;
         }
 
         ~Fraction() //Ceci est le destructeur
@@ -35,7 +36,7 @@ namespace FractionDemo
         }
         public Int32 denominateur { get; set; }
 
-        /*Attention! utilisation de cex propriétés:
+        /*Attention! utilisation de ces propriétés:
          * 
          * Fraction f = new Fraction();
          * f.numerateur=5;                    //Pour activer le setter
@@ -50,7 +51,7 @@ namespace FractionDemo
             get { return (Double)numerateur / (Double)denominateur; }
         }
         public String nom { get; set; }
-        private Int32 numero = 1;
+        private static Int32 numero = 1;
         #endregion
 
         #region méthodes
