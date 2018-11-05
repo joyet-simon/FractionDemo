@@ -94,6 +94,14 @@ namespace FractionDemo
                 denominateur = denominateur / p;
             }
         }
+        public static Fraction Parse(String str)
+        {
+            String[] strs = str.Split('/');
+            Int32 num = Int32.Parse(strs[0]);
+            Int32 denum = Int32.Parse(strs[1]);
+            Fraction f = new Fraction(num, denum);
+            return f;
+        }
         #endregion
     }
 }

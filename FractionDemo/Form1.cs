@@ -19,13 +19,16 @@ namespace FractionDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Fraction f = new Fraction(9, 6);
-            MessageBox.Show(f.valeur.ToString());
-            f.simplifier();
-            MessageBox.Show(f.toText());
-            f.inverser();
-            MessageBox.Show(f.toText());
-            MessageBox.Show(f.nom);
+            //Fraction f = new Fraction(9, 6);
+            //MessageBox.Show(f.valeur.ToString());
+            //f.simplifier();
+            //MessageBox.Show(f.toText());
+            //f.inverser();
+            //MessageBox.Show(f.toText());
+            //MessageBox.Show(f.nom);
+            String s = "7/5";
+            Fraction f2 = Fraction.Parse(s);
+            MessageBox.Show(f2.toText());
         }
     }
 }
