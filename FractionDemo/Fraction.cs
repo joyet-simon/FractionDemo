@@ -134,35 +134,31 @@ namespace FractionDemo
 
         public static Boolean operator ==(Fraction f, Fraction g)
         {
-            f.simplifier();
-            g.simplifier();
-            if (f.numerateur == g.numerateur && f.denominateur == g.denominateur) { return true; }
-            else { return false; }
+            return checkEgals(f, g);
         }
 
         public static Boolean operator !=(Fraction f, Fraction g)
         {
+            return !checkEgals(f, g);
+        }
+
+        private static Boolean checkEgals(Fraction f, Fraction g)
+        {
             f.simplifier();
             g.simplifier();
-            if (f.numerateur == g.numerateur && f.denominateur == g.denominateur) { return false; }
-            else { return true; }
+            return (f.numerateur == g.numerateur && f.denominateur == g.denominateur) ? true : false;
         }
 
         public static Boolean operator >(Fraction f, Fraction g)
         {
-            f.simplifier();
-            g.simplifier();
-            if (f.numerateur > g.numerateur && f.denominateur > g.denominateur) { return true; }
-            else { return false; }
+            return (f.valeur > g.valeur) ? true : false;
         }
 
         public static Boolean operator <(Fraction f, Fraction g)
         {
-            f.simplifier();
-            g.simplifier();
-            if (f.numerateur < g.numerateur && f.denominateur < g.denominateur) { return true; }
-            else { return false; }
+            return (f.valeur > g.valeur) ? false : true;
         }
+
         #endregion
     }
 }

@@ -30,6 +30,7 @@ namespace FractionDemo
             Fraction f2 = Fraction.Parse(s);
             Fraction f3 = f2 / 3;
             MessageBox.Show(f3.toText());
+            if(f != f2) { MessageBox.Show("ok"); }
         }
     }
 }
