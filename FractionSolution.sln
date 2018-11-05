@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FractionDemo", "FractionDemo\FractionDemo.csproj", "{E4819445-68FF-444C-B12F-C5BFB2959548}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4819445-68FF-444C-B12F-C5BFB2959548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4819445-68FF-444C-B12F-C5BFB2959548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4819445-68FF-444C-B12F-C5BFB2959548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4819445-68FF-444C-B12F-C5BFB2959548}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FCEB1B9-4568-4D72-9CD6-4C00413C2F99}
+	EndGlobalSection
+EndGlobal
