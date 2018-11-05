@@ -16,5 +16,16 @@ namespace FractionDemo
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Fraction f = new Fraction();
+            f.denominateur = 6;
+            f.numerateur = 9;
+            f.simplifier();
+            MessageBox.Show(f.toText());
+            f.inverser();
+            MessageBox.Show(f.toText());
+        }
     }
 }
