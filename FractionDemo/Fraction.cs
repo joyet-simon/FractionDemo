@@ -28,13 +28,41 @@ namespace FractionDemo
         #endregion
 
         #region Propriétés
+        public event EventHandler isInteger;
+
         private Int32 _numerateur;
         public Int32 numerateur
         {
-            set { _numerateur = value; }
+            set
+            {
+                _numerateur = value;
+                if (isInteger != null)
+                {
+                    if (denominateur != 0 && (numerateur % denominateur) == 0)
+                    {
+                        isInteger(this, new EventArgs());
+                    }
+                }
+            }
             get { return _numerateur; }
         }
-        public Int32 denominateur { get; set; }
+
+        private Int32 _denominateur;
+        public Int32 denominateur
+        {
+            get { return _denominateur; }
+            set
+            {
+                _denominateur = value;
+                if (isInteger != null)
+                {
+                    if (denominateur != 0 && (numerateur % denominateur) == 0)
+                    {
+                        isInteger(this, new EventArgs());
+                    }
+                }
+            }
+        }
 
         /*Attention! utilisation de ces propriétés:
          * 
