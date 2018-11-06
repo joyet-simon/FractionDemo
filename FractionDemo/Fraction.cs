@@ -142,8 +142,10 @@ namespace FractionDemo
             return !checkEgals(f, g);
         }
 
-        private static Boolean checkEgals(Fraction f, Fraction g)
+        private static Boolean checkEgals(Fraction f1, Fraction f2)
         {
+            Fraction f = new Fraction(f1.numerateur, f1.denominateur);
+            Fraction g = new Fraction(f2.numerateur, f2.denominateur);
             f.simplifier();
             g.simplifier();
             return (f.numerateur == g.numerateur && f.denominateur == g.denominateur) ? true : false;

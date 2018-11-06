@@ -19,7 +19,7 @@ namespace FractionDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Fraction f = new Fraction(9, 6);
+            Fraction f = new Fraction(18,10);
             //MessageBox.Show(f.valeur.ToString());
             //f.simplifier();
             //MessageBox.Show(f.toText());
@@ -30,7 +30,8 @@ namespace FractionDemo
             Fraction f2 = Fraction.Parse(s);
             Fraction f3 = f2 / 3;
             MessageBox.Show(f3.toText());
-            if(f != f2) { MessageBox.Show("ok"); }
+            if(f != f2) { MessageBox.Show(f.toText() + " n'est pas égale à " + f2.toText()); }
+            else { MessageBox.Show(f.toText() + " est égale à " + f2.toText()); }
         }
     }
 }
