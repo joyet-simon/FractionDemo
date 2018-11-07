@@ -27,7 +27,6 @@ namespace FractionDemo
         /// </summary>
         public new Int32 denominateur { get; }
 
-
         public new String toText()
         {
             return numerateur.ToString() + "\n---\n100";

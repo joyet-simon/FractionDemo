@@ -54,6 +54,12 @@ namespace FractionDemo
             set
             {
                 _denominateur = value;
+                if (denominateur == 0)
+                {
+                    FractionException fe = new FractionException("Impossible de diviser par 0");
+                    throw fe;
+                }
+
                 if (isInteger != null)
                 {
                     if (denominateur != 0 && (numerateur % denominateur) == 0)

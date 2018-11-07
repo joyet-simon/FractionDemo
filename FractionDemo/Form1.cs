@@ -36,12 +36,18 @@ namespace FractionDemo
             //MessageBox.Show(f3.toText());
             //if (f != f2) { MessageBox.Show(f.toText() + " n'est pas égale à " + f2.toText()); }
             //else { MessageBox.Show(f.toText() + " est égale à " + f2.toText()); }
-
-            Centieme centi = new Centieme(6, 10);
-            MessageBox.Show(centi.toText());
-            MessageBox.Show(centi.ToString());
-            
-
+            try
+            {
+                Centieme centi = new Centieme(6, 10);
+                MessageBox.Show(centi.toText());
+                MessageBox.Show(centi.ToString());
+                Fraction f = new Fraction(1, 0);
+                MessageBox.Show(f.toText());
+            }
+            catch (FractionException fe)
+            {
+                MessageBox.Show(fe.Message);
+            }
         }
 
         //private void test(object sender, EventArgs e)
