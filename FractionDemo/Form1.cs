@@ -48,6 +48,10 @@ namespace FractionDemo
             {
                 MessageBox.Show(fe.Message);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         //private void test(object sender, EventArgs e)

@@ -56,8 +56,7 @@ namespace FractionDemo
                 _denominateur = value;
                 if (denominateur == 0)
                 {
-                    FractionException fe = new FractionException("Impossible de diviser par 0");
-                    throw fe;
+                    throw new FractionException("Impossible de diviser par 0"); ;
                 }
 
                 if (isInteger != null)
