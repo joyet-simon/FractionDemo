@@ -38,8 +38,9 @@ namespace FractionDemo
             //else { MessageBox.Show(f.toText() + " est égale à " + f2.toText()); }
 
             Centieme centi = new Centieme(6, 10);
-            MessageBox.Show(centi.ToString());
             MessageBox.Show(centi.toText());
+            MessageBox.Show(centi.ToString());
+            
 
         }
 
