@@ -20,29 +20,33 @@ namespace FractionDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Fraction f = new Fraction();
-            f.isInteger += test;
-            f.numerateur = 18;
-            f.denominateur = 9;
+            //Fraction f = new Fraction();
+            //f.isInteger += test;
+            //f.numerateur = 18;
+            //f.denominateur = 9;
             //MessageBox.Show(f.valeur.ToString());
             //f.simplifier();
             //MessageBox.Show(f.toText());
             //f.inverser();
             //MessageBox.Show(f.toText());
             //MessageBox.Show(f.nom);
-            String s = "7/5";
-            Fraction f2 = Fraction.Parse(s);
-            Fraction f3 = f2 / 3;
-            MessageBox.Show(f3.toText());
-            if (f != f2) { MessageBox.Show(f.toText() + " n'est pas égale à " + f2.toText()); }
-            else { MessageBox.Show(f.toText() + " est égale à " + f2.toText()); }
+            //String s = "7/5";
+            //Fraction f2 = Fraction.Parse(s);
+            //Fraction f3 = f2 / 3;
+            //MessageBox.Show(f3.toText());
+            //if (f != f2) { MessageBox.Show(f.toText() + " n'est pas égale à " + f2.toText()); }
+            //else { MessageBox.Show(f.toText() + " est égale à " + f2.toText()); }
+
+            Centieme centi = new Centieme(6, 10);
+            MessageBox.Show(centi.ToString());
+            MessageBox.Show(centi.toText());
 
         }
 
-        private void test(object sender, EventArgs e)
-        {
-            MessageBox.Show("test");
-        }
+        //private void test(object sender, EventArgs e)
+        //{
+        //    MessageBox.Show("test");
+        //}
 
     }
 }
